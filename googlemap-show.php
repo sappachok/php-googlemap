@@ -31,19 +31,26 @@
             title: 'จุดเริ่มต้น'
         });
 
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(8.460799, 99.859021),
-            map: map,
-            icon: 'new_marker.png',
-            title: 'จุดที่ 2'
-        });   
+        var location = [{
+                name: "จุดที่ 2",
+                lat: "8.460799",
+                lon: "99.859021"
+            },
+            {
+                name: "จุดที่ 3",
+                lat: "8.462062",
+                lon: "99.859686"
+            }
+        ]
 
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(8.462062, 99.859686),
-            map: map,
-            icon: 'new_marker.png',
-            title: 'จุดที่ 3'
-        });         
+        $.each(location, function(index, value) {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(value.lat, value.lon),
+                map: map,
+                icon: 'new_marker.png',
+                title: value.name
+            });
+        });       
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=API_Key&callback=initMap"></script>
