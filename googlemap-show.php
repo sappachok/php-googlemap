@@ -29,6 +29,12 @@
             map: map,
             title: 'จุดเริ่มต้น'
         });
+
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(8.460799, 99.859021),
+            map: map,
+            title: 'จุดที่ 2'
+        });        
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6wk2trQWVwXIZ7egSo2IVsIxql5fSCJc&callback=initMap"></script>
