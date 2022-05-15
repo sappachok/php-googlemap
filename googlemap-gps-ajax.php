@@ -31,33 +31,11 @@
             title: 'จุดเริ่มต้น'
         });
 
-        var location = [{
-                name: "จุดที่ 2",
-                lat: "8.460799",
-                lon: "99.859021"
-            },
-            {
-                name: "จุดที่ 3",
-                lat: "8.462062",
-                lon: "99.859686"
-            },
-            {
-                name: "จุดที่ 4",
-                lat: "8.462562",
-                lon: "99.859786"
-            }
-        ]
-
-        $.each(location, function(index, value) {
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(value.lat, value.lon),
-                map: map,
-                icon: 'new_marker.png',
-                title: value.name
-            });
-        });       
+		$.get('get_location_json.php', function(response) {
+			console.log(response);
+		});
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=API_Key&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6wk2trQWVwXIZ7egSo2IVsIxql5fSCJc&callback=initMap"></script>
 
 </html>
