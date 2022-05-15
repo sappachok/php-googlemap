@@ -23,6 +23,6 @@
         var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6wk2trQWVwXIZ7egSo2IVsIxql5fSCJc&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=API_Key&callback=initMap"></script>
 
 </html>
