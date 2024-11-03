@@ -8,6 +8,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
+<?php
+    include("config.php");
+?>
+
 <body bgcolor="gray">
     <div id="googleMap" style="height:600px;" bgcolor="white">Show Google Map Here.</div>
 </body>
@@ -36,6 +40,6 @@
 		});
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=API_Key&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key; ?>&callback=initMap"></script>
 
 </html>

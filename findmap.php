@@ -1,6 +1,10 @@
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 
+        <?php
+            include("config.php");
+        ?>
+
         <form>
             <div class="container">
              <label>สถานที่ / จังหวัด</label>
@@ -65,4 +69,4 @@
                 });
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=API_Key&callback=initMap" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $api_key; ?>&callback=initMap" async defer></script>
